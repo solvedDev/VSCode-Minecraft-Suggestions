@@ -1,7 +1,7 @@
 # VSCode-Minecraft-Suggestions
-Auto completions for Minecraft's entity JSON.
+Autocompletions for Minecraft's entity JSON. The descriptions and components were extracted from the official addon documentation. You shouldn't completely rely on the autocompletions but most are working quite well.
 
-## Features
+## Showcase
 ![Example](/example.png)
 
 ## Installation for VSCode
