@@ -1,0 +1,91 @@
+{
+	"health": {
+		"prefix": "health",
+		"body": [
+			"\"minecraft:health\": {",
+			"\t\"value\": ${0:20},",
+			"\t\"max\": ${1:20}",
+			"}"
+		],
+		"description": "Set the health of an entity."
+	},
+	"movement": {
+		"prefix": "movement",
+		"body": [
+			"\"minecraft:movement\": {",
+			"\t\"value\": ${0:1}",
+			"}"
+		],
+		"description": "Set the movement speed of an entity."
+	},
+	"identifier": {
+		"prefix": "identifier",
+		"body": [
+			"\"minecraft:identifier\": {",
+			"\t\"id\": $0",
+			"}"
+		],
+		"description": "Set the identifier (id) of an entity."
+	},
+	"physics": {
+		"prefix": "physics",
+		"body": [
+			"\"minecraft:physics\": {",
+			"\t\"has_collison\": ${0:true},",
+			"\t\"has_gravity\": ${1:true}",
+			"}"
+		],
+		"description": "Modify the physics of an entity."
+	},
+	"fall_damage": {
+		"prefix": "fall_damage",
+		"body": [
+			"\"minecraft:fall_damage\": {",
+			"\t\"value\": ${0:1.0}",
+			"}"
+		],
+		"description": "Modify the fall damage of an entity."
+	},
+	"follow_range": {
+		"prefix": "follow_range",
+		"body": [
+			"\"minecraft:follow_range\": {",
+			"\t\"value\": ${0:1.0},",
+			"\t\"max\": ${1:1.0}",
+			"}"
+		],
+		"description": "Define a follow range for the follow_owner component."
+	},
+	"horse.jump_strength": {
+		"prefix": "horse.jump_strength",
+		"body": [
+			"\"minecraft:horse.jump_strength\": {",
+			"\t\"value\": {",
+			"\t\t\"range_max\": ${0:1.0},",
+			"\t\t\"range_min\": ${1:1.0}",
+			"\t}",
+			"}"
+		],
+		"description": "Define the jump strength of a horse."
+	},
+	"knockback_resistance": {
+		"prefix": "knockback_resistance",
+		"body": [
+			"\"minecraft:knockback_resistance\": {",
+			"\t\"value\": ${0:1.0},",
+			"\t\"max\": ${1:1.0}",
+			"}"
+		],
+		"description": "Modify the knockback resistance of an entity."
+	},
+	"underwater_movement": {
+		"prefix": "underwater_movement",
+		"body": [
+			"\"minecraft:underwater_movement\": {",
+			"\t\"value\": ${0:1.0},",
+			"\t\"max\": ${1:1.0}",
+			"}"
+		],
+		"description": "Modify the underwater movement of an entity."
+	}
+}
