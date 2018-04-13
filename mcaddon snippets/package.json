@@ -25,6 +25,10 @@
             {
                 "language": "json",
                 "path": "./snippets/components.json"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/undocumented_components.json"
             }
         ]
     }
