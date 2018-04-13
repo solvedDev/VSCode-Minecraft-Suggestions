@@ -1,0 +1,76 @@
+{
+	"true": {
+		"prefix": "true",
+		"body": [
+			"true${0:,}"
+		]
+	},
+	"false": {
+		"prefix": "false",
+		"body": [
+			"false${0:,}"
+		]
+	},
+	"entity": {
+		"prefix": "entity",
+		"body": [
+			"\"minecraft:entity\": {",
+			"\t$0",
+			"}"
+		]
+	},
+	"format_version": {
+		"prefix": "format_version",
+		"body": [
+			"format_version: ${0:\"1.2.0\"},"
+		]
+	},
+	"components": {
+		"prefix": "components",
+		"body": [
+			"\"components\": {",
+			"\t$0",
+			"}"
+		]
+	},
+	"component_groups": {
+		"prefix": "component_groups",
+		"body": [
+			"\"component_groups\": {",
+			"\t$0",
+			"}"
+		]
+	},
+	"component_groups_event": {
+		"prefix": "component_groups",
+		"body": [
+			"\"component_groups\": [",
+			"\t$0",
+			"]"
+		]
+	},
+	"events": {
+		"prefix": "events",
+		"body": [
+			"\"events\": {",
+			"\t$0",
+			"}"
+		]
+	},
+	"add": {
+		"prefix": "add",
+		"body": [
+			"\"add\": {",
+			"\t$0",
+			"}"
+		]
+	},
+	"remove": {
+		"prefix": "remove",
+		"body": [
+			"\"remove\": {",
+			"\t$0",
+			"}"
+		]
+	}
+}

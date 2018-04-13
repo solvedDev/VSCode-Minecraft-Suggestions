@@ -1,0 +1,31 @@
+{
+    "name": "mc_snippets",
+    "displayName": "MC Snippets",
+    "description": "A snippet packet for Minecraft addons",
+    "version": "0.0.1",
+    "publisher": "solvedDev",
+    "engines": {
+        "vscode": "^1.10.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "json",
+            "aliases": ["Minecraft JSON", "mc json"],
+            "extensions": [".json"],
+            "configuration": "./language-configuration.json"
+        }],
+        "snippets": [
+            {
+                "language": "json",
+                "path": "./snippets/other.json"
+            },
+            {
+                "language": "json",
+                "path": "./snippets/components.json"
+            }
+        ]
+    }
+}

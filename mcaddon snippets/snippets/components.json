@@ -1,0 +1,1964 @@
+{
+	"addrider": {
+		"prefix": "addrider",
+		"body": [
+			"\"minecraft:addrider\": {",
+			"\t\"entity_type\": $0",
+			"}"
+		],
+		"description": "Adds a rider to the entity. Requires minecraft:rideable."
+	},
+	"ageable": {
+		"prefix": "ageable",
+		"body": [
+			"\"minecraft:ageable\": {",
+			"\t\"duration\": ${0:1200.0},",
+			"\t\"feedItems\": $1,",
+			"\t\"grow_up\": $2",
+			"}"
+		],
+		"description": "Adds a timer for the entity to grow up. It can be accelerated by giving the entity the items it likes as defined by feedItems."
+	},
+	"ambient_sound_interval": {
+		"prefix": "ambient_sound_interval",
+		"body": [
+			"\"minecraft:ambient_sound_interval\": {",
+			"\t\"range\": ${0:16.0},",
+			"\t\"value\": ${1:8.0}",
+			"}"
+		],
+		"description": "Sets the entity's delay between playing its ambient sound."
+	},
+	"angry": {
+		"prefix": "angry",
+		"body": [
+			"\"minecraft:angry\": {",
+			"\t\"broadcastAnger\": ${0:false},",
+			"\t\"broadcastRange\": ${1:20},",
+			"\t\"calm_event\": $2,",
+			"\t\"duration\": ${3:25},",
+			"\t\"duration_delta\": ${4:0}",
+			"}"
+		],
+		"description": "Defines the entity's 'angry' state using a timer."
+	},
+	"attack": {
+		"prefix": "attack",
+		"body": [
+			"\"minecraft:attack\": {",
+			"\t\"damage\": $0,",
+			"\t\"effect_duration\": ${1:0.0},",
+			"\t\"effect_name\": $2",
+			"}"
+		],
+		"description": "Defines an entity's melee attack and any additional effects on it."
+	},
+	"behavior.avoid_mob_type": {
+		"prefix": "behavior.avoid_mob_type",
+		"body": [
+			"\"minecraft:behavior.avoid_mob_type\": {",
+			"\t\"entity_types\": $0,",
+			"\t\"max_dist\": ${1:0.0},",
+			"\t\"probability_per_strength\": ${2:1.0},",
+			"\t\"sprint_speed_multiplier\": ${3:1.0},",
+			"\t\"walk_speed_multiplier\": ${4:1.0}",
+			"}"
+		],
+		"description": "Allows this entity to avoid certain mob types."
+	},
+	"behavior.beg": {
+		"prefix": "behavior.beg",
+		"body": [
+			"\"minecraft:behavior.beg\": {",
+			"\t\"items\": $0,",
+			"\t\"look_distance\": ${1:8.0},",
+			"\t\"look_time\": ${2:[2, 4]}",
+			"}"
+		],
+		"description": "Allows this mob to look at and follow the player that holds food they like."
+	},
+	"behavior.break_door": {
+		"prefix": "behavior.break_door",
+		"body": [
+			"\"minecraft:behavior.break_door\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows this mob to break doors."
+	},
+	"behavior.breed": {
+		"prefix": "behavior.breed",
+		"body": [
+			"\"minecraft:behavior.breed\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows this mob to breed with other mobs."
+	},
+	"behavior.charge_attack": {
+		"prefix": "behavior.charge_attack",
+		"body": [
+			"\"minecraft:behavior.charge_attack\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to attack its target by running at it."
+	},
+	"behavior.controlled_by_player": {
+		"prefix": "behavior.controlled_by_player",
+		"body": [
+			"\"minecraft:behavior.controlled_by_player\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to be controlled by the player."
+	},
+	"behavior.defend_village_target": {
+		"prefix": "behavior.defend_village_target",
+		"body": [
+			"\"minecraft:behavior.defend_village_target\": {",
+			"\t\"entity_types\": $0",
+			"}"
+		],
+		"description": "Allows the mob to stay in the village and fight mobs hostile to the villagers."
+	},
+	"behavior.door_interact": {
+		"prefix": "behavior.door_interact",
+		"body": [
+			"\"minecraft:behavior.door_interact\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to open and close doors."
+	},
+	"behavior.dragonchargeplayer": {
+		"prefix": "behavior.dragonchargeplayer",
+		"body": [
+			"\"minecraft:behavior.dragonchargeplayer\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the dragon to attack a player by flying fast at them. The player is chosen by the dragonscanning goal. Can only be used by the Ender Dragon."
+	},
+	"behavior.dragondeath": {
+		"prefix": "behavior.dragondeath",
+		"body": [
+			"\"minecraft:behavior.dragondeath\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the dragon to go out with glory. This controls the Ender Dragon's death animation and can't be used by other mobs."
+	},
+	"behavior.dragonflaming": {
+		"prefix": "behavior.dragonflaming",
+		"body": [
+			"\"minecraft:behavior.dragonflaming\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the dragon to use its flame breath attack. Can only be used by the Ender Dragon."
+	},
+	"behavior.dragonholdingpattern": {
+		"prefix": "behavior.dragonholdingpattern",
+		"body": [
+			"\"minecraft:behavior.dragonholdingpattern\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the Dragon to fly around in a circle around the center podium. Can only be used by the Ender Dragon."
+	},
+	"behavior.dragonlanding": {
+		"prefix": "behavior.dragonlanding",
+		"body": [
+			"\"minecraft:behavior.dragonlanding\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the Dragon to stop flying and transition into perching mode. Can only be used by the Ender Dragon."
+	},
+	"behavior.dragonscanning": {
+		"prefix": "behavior.dragonscanning",
+		"body": [
+			"\"minecraft:behavior.dragonscanning\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the dragon to look around for a player to attack while in perch mode. Can only be used by the Ender Dragon."
+	},
+	"behavior.dragonstrafeplayer": {
+		"prefix": "behavior.dragonstrafeplayer",
+		"body": [
+			"\"minecraft:behavior.dragonstrafeplayer\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the dragon to fly around looking for a player and shoot fireballs at them. Can only be used by the Ender Dragon."
+	},
+	"behavior.dragontakeoff": {
+		"prefix": "behavior.dragontakeoff",
+		"body": [
+			"\"minecraft:behavior.dragontakeoff\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the dragon to leave perch mode and go back to flying around. Can only be used by the Ender Dragon."
+	},
+	"behavior.eat_block": {
+		"prefix": "behavior.eat_block",
+		"body": [
+			"\"minecraft:behavior.eat_block\": {",
+			"\t\"on_eat\": $0",
+			"}"
+		],
+		"description": "Allows the mob to eat a block (for example, sheep eating grass)."
+	},
+	"behavior.enderman_leave_block": {
+		"prefix": "behavior.enderman_leave_block",
+		"body": [
+			"\"minecraft:behavior.enderman_leave_block\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the enderman to drop a block they are carrying. Can only be used by Endermen."
+	},
+	"behavior.enderman_take_block": {
+		"prefix": "behavior.enderman_take_block",
+		"body": [
+			"\"minecraft:behavior.enderman_take_block\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the enderman to take a block and carry it around. Can only be used by Endermen."
+	},
+	"behavior.find_mount": {
+		"prefix": "behavior.find_mount",
+		"body": [
+			"\"minecraft:behavior.find_mount\": {",
+			"\t\"avoid_water\": ${0:false},",
+			"\t\"mount_distance\": ${1:-1.0},",
+			"\t\"start_delay\": ${2:0},",
+			"\t\"target_needed\": ${3:false},",
+			"\t\"within_radius\": ${4:0.0}",
+			"}"
+		],
+		"description": "Allows the mob to look around for another mob to ride atop it."
+	},
+	"behavior.flee_sun": {
+		"prefix": "behavior.flee_sun",
+		"body": [
+			"\"minecraft:behavior.flee_sun\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to run away from direct sunlight and seek shade."
+	},
+	"behavior.float": {
+		"prefix": "behavior.float",
+		"body": [
+			"\"minecraft:behavior.float\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to stay afloat while swimming."
+	},
+	"behavior.float_wander": {
+		"prefix": "behavior.float_wander",
+		"body": [
+			"\"minecraft:behavior.float_wander\": {",
+			"\t\"float_duration\": ${0:[0.0, 0.0]},",
+			"\t\"must_reach\": ${1:false},",
+			"\t\"random_reselect\": ${2:false},",
+			"\t\"xz_dist\": ${3:10},",
+			"\t\"y_dist\": ${4:7},",
+			"\t\"y_offset\": ${5:0.0}",
+			"}"
+		],
+		"description": "Allows the mob to float around like the Ghast."
+	},
+	"behavior.follow_caravan": {
+		"prefix": "behavior.follow_caravan",
+		"body": [
+			"\"minecraft:behavior.follow_caravan\": {",
+			"\t\"entity_count\": ${0:1},",
+			"\t\"entity_types\": $1,",
+			"\t\"speed_multiplier\": ${2:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to follow mobs that are in a caravan."
+	},
+	"behavior.follow_mob": {
+		"prefix": "behavior.follow_mob",
+		"body": [
+			"\"minecraft:behavior.follow_mob\": {",
+			"\t\"search_range\": ${0:0},",
+			"\t\"speed_multiplier\": ${1:1.0},",
+			"\t\"stop_distance\": ${2:2.0}",
+			"}"
+		],
+		"description": "Allows the mob to follow other mobs."
+	},
+	"behavior.follow_owner": {
+		"prefix": "behavior.follow_owner",
+		"body": [
+			"\"minecraft:behavior.follow_owner\": {",
+			"\t\"speed_multiplier\": ${0:1.0},",
+			"\t\"start_distance\": ${1:10.0},",
+			"\t\"stop_distance\": ${2:2.0}",
+			"}"
+		],
+		"description": "Allows the mob to follow the player that owns them."
+	},
+	"behavior.follow_parent": {
+		"prefix": "behavior.follow_parent",
+		"body": [
+			"\"minecraft:behavior.follow_parent\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to follow their parent around."
+	},
+	"behavior.guardian_attack": {
+		"prefix": "behavior.guardian_attack",
+		"body": [
+			"\"minecraft:behavior.guardian_attack\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the guardian to use its laser beam attack. Can only be used by Guardians and Elder Guardians."
+	},
+	"behavior.harvest_farm_block": {
+		"prefix": "behavior.harvest_farm_block",
+		"body": [
+			"\"minecraft:behavior.harvest_farm_block\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows the villager to harvest nearby farms. Can only be used by Villagers."
+	},
+	"behavior.hurt_by_target": {
+		"prefix": "behavior.hurt_by_target",
+		"body": [
+			"\"minecraft:behavior.hurt_by_target\": {",
+			"\t\"alert_same_type\": ${0:false},",
+			"\t\"entity_types\": $1,",
+			"\t\"hurt_owner\": ${2:false}",
+			"}"
+		],
+		"description": "Allows the mob to target another mob that hurts them."
+	},
+	"behavior.leap_at_target": {
+		"prefix": "behavior.leap_at_target",
+		"body": [
+			"\"minecraft:behavior.leap_at_target\": {",
+			"\t\"must_be_on_ground\": ${0:true},",
+			"\t\"yd\": ${1:0.0}",
+			"}"
+		],
+		"description": "Allows monsters to jump at and attack their target. Can only be used by hostile mobs."
+	},
+	"behavior.look_at_entity": {
+		"prefix": "behavior.look_at_entity",
+		"body": [
+			"\"minecraft:behavior.look_at_entity\": {",
+			"\t\"angle_of_view_horizontal\": ${0:360},",
+			"\t\"angle_of_view_vertical\": ${1:360},",
+			"\t\"filters\": $2,",
+			"\t\"look_distance\": ${3:8.0},",
+			"\t\"look_time\": ${4:[2, 4]},",
+			"\t\"probability\": ${5:0.02}",
+			"}"
+		],
+		"description": "Allows the mob to look at nearby entities."
+	},
+	"behavior.look_at_player": {
+		"prefix": "behavior.look_at_player",
+		"body": [
+			"\"minecraft:behavior.look_at_player\": {",
+			"\t\"angle_of_view_horizontal\": ${0:360},",
+			"\t\"angle_of_view_vertical\": ${1:360},",
+			"\t\"look_distance\": ${2:8.0},",
+			"\t\"look_time\": ${3:[2, 4]},",
+			"\t\"probability\": ${4:0.02}",
+			"}"
+		],
+		"description": "Allows the mob to look at the player when the player is nearby."
+	},
+	"behavior.look_at_target": {
+		"prefix": "behavior.look_at_target",
+		"body": [
+			"\"minecraft:behavior.look_at_target\": {",
+			"\t\"angle_of_view_horizontal\": ${0:360},",
+			"\t\"angle_of_view_vertical\": ${1:360},",
+			"\t\"look_distance\": ${2:8.0},",
+			"\t\"look_time\": ${3:[2, 4]},",
+			"\t\"probability\": ${4:0.02}",
+			"}"
+		],
+		"description": "Allows the mob to look at the entity they are targetting."
+	},
+	"behavior.look_at_trading_player": {
+		"prefix": "behavior.look_at_trading_player",
+		"body": [
+			"\"minecraft:behavior.look_at_trading_player\": {",
+			"\t\"angle_of_view_horizontal\": ${0:360},",
+			"\t\"angle_of_view_vertical\": ${1:360},",
+			"\t\"look_distance\": ${2:8.0},",
+			"\t\"look_time\": ${3:[2, 4]},",
+			"\t\"probability\": ${4:0.02}",
+			"}"
+		],
+		"description": "Allows the mob to look at the player they are trading with."
+	},
+	"behavior.make_love": {
+		"prefix": "behavior.make_love",
+		"body": [
+			"\"minecraft:behavior.make_love\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the villager to look for a mate to spawn other villagers with. Can only be used by Villagers."
+	},
+	"behavior.melee_attack": {
+		"prefix": "behavior.melee_attack",
+		"body": [
+			"\"minecraft:behavior.melee_attack\": {",
+			"\t\"attack_types\": $0,",
+			"\t\"random_stop_interval\": ${1:0},",
+			"\t\"reach_multiplier\": ${2:2.0},",
+			"\t\"speed_multiplier\": ${3:1.0},",
+			"\t\"track_target\": ${4:false}",
+			"}"
+		],
+		"description": "Allows the mob to use close combat melee attacks."
+	},
+	"behavior.mount_pathing": {
+		"prefix": "behavior.mount_pathing",
+		"body": [
+			"\"minecraft:behavior.mount_pathing\": {",
+			"\t\"speed_multiplier\": ${0:1.0},",
+			"\t\"target_dist\": ${1:0.0},",
+			"\t\"track_target\": ${2:false}",
+			"}"
+		],
+		"description": "Allows the mob to move around on its own while mounted seeking a target to attack."
+	},
+	"behavior.move_indoors": {
+		"prefix": "behavior.move_indoors",
+		"body": [
+			"\"minecraft:behavior.move_indoors\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Can only be used by Villagers. Allows them to seek shelter indoors."
+	},
+	"behavior.move_through_village": {
+		"prefix": "behavior.move_through_village",
+		"body": [
+			"\"minecraft:behavior.move_through_village\": {",
+			"\t\"only_at_night\": ${0:false},",
+			"\t\"speed_multiplier\": ${1:1.0}",
+			"}"
+		],
+		"description": "Can only be used by Villagers. Allows the villagers to create paths around the village."
+	},
+	"behavior.move_towards_restriction": {
+		"prefix": "behavior.move_towards_restriction",
+		"body": [
+			"\"minecraft:behavior.move_towards_restriction\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows Guardians, Iron Golems and Villagers to move within their pre-defined area that the mob should be restricted to. Other mobs don't have a restriction defined."
+	},
+	"behavior.move_towards_target": {
+		"prefix": "behavior.move_towards_target",
+		"body": [
+			"\"minecraft:behavior.move_towards_target\": {",
+			"\t\"within_radius\": ${0:0.0}",
+			"}"
+		],
+		"description": "Allows mob to move towards its current target."
+	},
+	"behavior.nearest_attackable_target": {
+		"prefix": "behavior.nearest_attackable_target",
+		"body": [
+			"\"minecraft:behavior.nearest_attackable_target\": {",
+			"\t\"attack_interval\": ${0:0},",
+			"\t\"entity_types\": $1,",
+			"\t\"must_reach\": ${2:false},",
+			"\t\"must_see\": ${3:false},",
+			"\t\"must_see_forget_duration\": ${4:3.0},",
+			"\t\"reselect_targets\": ${5:false},",
+			"\t\"within_radius\": ${6:0.0}",
+			"}"
+		],
+		"description": "Allows the mob to check for and pursue the nearest valid target."
+	},
+	"behavior.ocelot_sit_on_block": {
+		"prefix": "behavior.ocelot_sit_on_block",
+		"body": [
+			"\"minecraft:behavior.ocelot_sit_on_block\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows to mob to be able to sit in place like the ocelot."
+	},
+	"behavior.ocelotattack": {
+		"prefix": "behavior.ocelotattack",
+		"body": [
+			"\"minecraft:behavior.ocelotattack\": {",
+			"\t\"sneak_speed_multiplier\": ${0:1.0},",
+			"\t\"sprint_speed_multiplier\": ${1:1.0},",
+			"\t\"walk_speed_multiplier\": ${2:1.0}",
+			"}"
+		],
+		"description": "Can only be used by the Ocelot. Allows it to perform the sneak and pounce attack."
+	},
+	"behavior.offer_flower": {
+		"prefix": "behavior.offer_flower",
+		"body": [
+			"\"minecraft:behavior.offer_flower\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to offer the player a flower like the Iron Golem does."
+	},
+	"behavior.open_door": {
+		"prefix": "behavior.open_door",
+		"body": [
+			"\"minecraft:behavior.open_door\": {",
+			"\t\"close_door_after\": ${0:true}",
+			"}"
+		],
+		"description": "Allows the mob to open doors. Requires the mob to be able to path through doors, otherwise the mob won't even want to try opening them."
+	},
+	"behavior.owner_hurt_by_target": {
+		"prefix": "behavior.owner_hurt_by_target",
+		"body": [
+			"\"minecraft:behavior.owner_hurt_by_target\": {",
+			"\t\"entity_types\": $0",
+			"}"
+		],
+		"description": "Allows the mob to target another mob that hurts their owner."
+	},
+	"behavior.owner_hurt_target": {
+		"prefix": "behavior.owner_hurt_target",
+		"body": [
+			"\"minecraft:behavior.owner_hurt_target\": {",
+			"\t\"entity_types\": $0",
+			"}"
+		],
+		"description": "Allows the mob to target a mob that is hurt by their owner."
+	},
+	"behavior.panic": {
+		"prefix": "behavior.panic",
+		"body": [
+			"\"minecraft:behavior.panic\": {",
+			"\t\"force\": ${0:false},",
+			"\t\"speed_multiplier\": ${1:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to enter the panic state, which makes it run around and away from the damage source that made it enter this state."
+	},
+	"behavior.peek": {
+		"prefix": "behavior.peek",
+		"body": [
+			"\"minecraft:behavior.peek\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to peek out. This is what the shulker uses to look out of its shell."
+	},
+	"behavior.pickup_items": {
+		"prefix": "behavior.pickup_items",
+		"body": [
+			"\"minecraft:behavior.pickup_items\": {",
+			"\t\"goal_radius\": ${0:0.5},",
+			"\t\"max_dist\": ${1:0.0},",
+			"\t\"speed_multiplier\": ${2:1.0},",
+			"\t\"track_target\": ${3:false}",
+			"}"
+		],
+		"description": "Allows the mob to pick up items on the ground."
+	},
+	"behavior.play": {
+		"prefix": "behavior.play",
+		"body": [
+			"\"minecraft:behavior.play\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to play with other baby villagers. This can only be used by Villagers."
+	},
+	"behavior.player_ride_tamed": {
+		"prefix": "behavior.player_ride_tamed",
+		"body": [
+			"\"minecraft:behavior.player_ride_tamed\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to be ridden by the player after being tamed."
+	},
+	"behavior.raid_garden": {
+		"prefix": "behavior.raid_garden",
+		"body": [
+			"\"minecraft:behavior.raid_garden\": {",
+			"\t\"blocks\": $0,",
+			"\t\"eat_delay\": ${1:2},",
+			"\t\"full_delay\": ${2:100},",
+			"\t\"goal_radius\": ${3:0.5},",
+			"\t\"max_to_eat\": ${4:6},",
+			"\t\"search_range\": ${5:0},",
+			"\t\"speed_multiplier\": ${6:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to eat crops out of farms until they are full."
+	},
+	"behavior.random_fly": {
+		"prefix": "behavior.random_fly",
+		"body": [
+			"\"minecraft:behavior.random_fly\": {",
+			"\t\"can_land_on_trees\": ${0:true},",
+			"\t\"xz_dist\": ${1:10},",
+			"\t\"y_dist\": ${2:7}",
+			"}"
+		],
+		"description": "Allows a mob to randomly fly around."
+	},
+	"behavior.random_look_around": {
+		"prefix": "behavior.random_look_around",
+		"body": [
+			"\"minecraft:behavior.random_look_around\": {",
+			"\t\"look_time\": ${0:[2, 4]}",
+			"}"
+		],
+		"description": "Allows the mob to randomly look around."
+	},
+	"behavior.random_stroll": {
+		"prefix": "behavior.random_stroll",
+		"body": [
+			"\"minecraft:behavior.random_stroll\": {",
+			"\t\"xz_dist\": ${0:10},",
+			"\t\"y_dist\": ${1:7}",
+			"}"
+		],
+		"description": "Allows a mob to randomly stroll around."
+	},
+	"behavior.ranged_attack": {
+		"prefix": "behavior.ranged_attack",
+		"body": [
+			"\"minecraft:behavior.ranged_attack\": {",
+			"\t\"attack_interval_max\": ${0:0},",
+			"\t\"attack_interval_min\": ${1:0},",
+			"\t\"attack_radius\": ${2:0.0},",
+			"\t\"burst_interval\": ${3:0.0},",
+			"\t\"burst_shots\": ${4:1},",
+			"\t\"charge_charged_trigger\": ${5:0.0},",
+			"\t\"charge_shoot_trigger\": ${6:0.0},",
+			"\t\"speed_multiplier\": ${7:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to use ranged attacks like shooting arrows."
+	},
+	"behavior.receive_love": {
+		"prefix": "behavior.receive_love",
+		"body": [
+			"\"minecraft:behavior.receive_love\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the villager to stop so another villager can breed with it. Can only be used by a Villager."
+	},
+	"behavior.restrict_open_door": {
+		"prefix": "behavior.restrict_open_door",
+		"body": [
+			"\"minecraft:behavior.restrict_open_door\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to stay indoors during night time."
+	},
+	"behavior.restrict_sun": {
+		"prefix": "behavior.restrict_sun",
+		"body": [
+			"\"minecraft:behavior.restrict_sun\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to automatically start avoiding the sun when its a clear day out."
+	},
+	"behavior.run_around_like_crazy": {
+		"prefix": "behavior.run_around_like_crazy",
+		"body": [
+			"\"minecraft:behavior.run_around_like_crazy\": {",
+			"\t\"speed_multiplier\": ${0:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to run around aimlessly."
+	},
+	"behavior.send_event": {
+		"prefix": "behavior.send_event",
+		"body": [
+			"\"minecraft:behavior.send_event\": {",
+			"\t\"cast_duration\": ${0:Total delay of the steps},",
+			"\t\"sequence\": $1",
+			"}"
+		],
+		"description": "Allows the mob to send an event to another mob."
+	},
+	"behavior.share_items": {
+		"prefix": "behavior.share_items",
+		"body": [
+			"\"minecraft:behavior.share_items\": {",
+			"\t\"entity_types\": $0,",
+			"\t\"goal_radius\": ${1:0.5},",
+			"\t\"max_dist\": ${2:0.0},",
+			"\t\"speed_multiplier\": ${3:1.0}",
+			"}"
+		],
+		"description": "Allows the mob to give items it has to others."
+	},
+	"behavior.silverfish_merge_with_stone": {
+		"prefix": "behavior.silverfish_merge_with_stone",
+		"body": [
+			"\"minecraft:behavior.silverfish_merge_with_stone\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to go into stone blocks like Silverfish do. Currently it can only be used by Silverfish."
+	},
+	"behavior.silverfish_wake_up_friends": {
+		"prefix": "behavior.silverfish_wake_up_friends",
+		"body": [
+			"\"minecraft:behavior.silverfish_wake_up_friends\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to alert mobs in nearby blocks to come out. Currently it can only be used by Silverfish."
+	},
+	"behavior.skeleton_horse_trap": {
+		"prefix": "behavior.skeleton_horse_trap",
+		"body": [
+			"\"minecraft:behavior.skeleton_horse_trap\": {",
+			"\t\"duration\": ${0:1.0},",
+			"\t\"within_radius\": ${1:0.0}",
+			"}"
+		],
+		"description": "Allows Equine mobs to be Horse Traps and be triggered like them, spawning a lightning bolt and a bunch of horses when a player is nearby. Can only be used by Horses, Mules, Donkeys and Skeleton Horses."
+	},
+	"behavior.slime_attack": {
+		"prefix": "behavior.slime_attack",
+		"body": [
+			"\"minecraft:behavior.slime_attack\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Can only be used by Slimes and Magma Cubes. Allows the mob to use a melee attack like the slime's."
+	},
+	"behavior.slime_float": {
+		"prefix": "behavior.slime_float",
+		"body": [
+			"\"minecraft:behavior.slime_float\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Can only be used by Slimes and Magma Cubes. Controls their ability to float in water / lava."
+	},
+	"behavior.slime_keep_on_jumping": {
+		"prefix": "behavior.slime_keep_on_jumping",
+		"body": [
+			"\"minecraft:behavior.slime_keep_on_jumping\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Can only be used by Slimes and Magma Cubes. Allows the mob to continuously jump around like a slime."
+	},
+	"behavior.slime_random_direction": {
+		"prefix": "behavior.slime_random_direction",
+		"body": [
+			"\"minecraft:behavior.slime_random_direction\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Can only be used by Slimes and Magma Cubes. Allows the mob to move in random directions like a slime."
+	},
+	"behavior.squid_dive": {
+		"prefix": "behavior.squid_dive",
+		"body": [
+			"\"minecraft:behavior.squid_dive\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the squid to dive down in water. Can only be used by the Squid."
+	},
+	"behavior.squid_flee": {
+		"prefix": "behavior.squid_flee",
+		"body": [
+			"\"minecraft:behavior.squid_flee\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the squid to swim away. Can only be used by the Squid."
+	},
+	"behavior.squid_idle": {
+		"prefix": "behavior.squid_idle",
+		"body": [
+			"\"minecraft:behavior.squid_idle\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the squid to swim in place idly. Can only be used by the Squid."
+	},
+	"behavior.squid_move_away_from_ground": {
+		"prefix": "behavior.squid_move_away_from_ground",
+		"body": [
+			"\"minecraft:behavior.squid_move_away_from_ground\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the squid to move away from ground blocks and back to water. Can only be used by the Squid."
+	},
+	"behavior.squid_out_of_water": {
+		"prefix": "behavior.squid_out_of_water",
+		"body": [
+			"\"minecraft:behavior.squid_out_of_water\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the squid to stick to the ground when outside water. Can only be used by the Squid."
+	},
+	"behavior.stay_while_sitting": {
+		"prefix": "behavior.stay_while_sitting",
+		"body": [
+			"\"minecraft:behavior.stay_while_sitting\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to stay put while it is in a sitting state instead of doing something else."
+	},
+	"behavior.stomp_attack": {
+		"prefix": "behavior.stomp_attack",
+		"body": [
+			"\"minecraft:behavior.stomp_attack\": {",
+			"\t\"attack_types\": $0,",
+			"\t\"random_stop_interval\": ${1:0},",
+			"\t\"reach_multiplier\": ${2:2.0},",
+			"\t\"speed_multiplier\": ${3:1.0},",
+			"\t\"track_target\": ${4:false}",
+			"}"
+		],
+		"description": "Allows the mob to use the polar bear's melee attack."
+	},
+	"behavior.summon_entity": {
+		"prefix": "behavior.summon_entity",
+		"body": [
+			"\"minecraft:behavior.summon_entity\": {",
+			"\t\"summon_choices\": $0",
+			"}"
+		],
+		"description": "Allows the mob to attack the player by summoning other entities."
+	},
+	"behavior.swell": {
+		"prefix": "behavior.swell",
+		"body": [
+			"\"minecraft:behavior.swell\": {",
+			"\t\"start_distance\": ${0:10.0},",
+			"\t\"stop_distance\": ${1:2.0}",
+			"}"
+		],
+		"description": "Allows the creeper to swell up when a player is nearby. It can only be used by Creepers."
+	},
+	"behavior.take_flower": {
+		"prefix": "behavior.take_flower",
+		"body": [
+			"\"minecraft:behavior.take_flower\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Can only be used by Villagers. Allows the mob to accept flowers from Iron Golems."
+	},
+	"behavior.tempt": {
+		"prefix": "behavior.tempt",
+		"body": [
+			"\"minecraft:behavior.tempt\": {",
+			"\t\"can_get_scared\": ${0:false},",
+			"\t\"items\": $1,",
+			"\t\"speed_multiplier\": ${2:1.0},",
+			"\t\"within_radius\": ${3:0.0}",
+			"}"
+		],
+		"description": "Allows the mob to be tempted by food they like."
+	},
+	"behavior.trade_with_player": {
+		"prefix": "behavior.trade_with_player",
+		"body": [
+			"\"minecraft:behavior.trade_with_player\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the player to trade with this mob."
+	},
+	"behavior.vex_copy_owner_target": {
+		"prefix": "behavior.vex_copy_owner_target",
+		"body": [
+			"\"minecraft:behavior.vex_copy_owner_target\": {",
+			"\t\"entity_types\": $0",
+			"}"
+		],
+		"description": "Allows the mob to target the same entity its owner is targeting."
+	},
+	"behavior.vex_random_move": {
+		"prefix": "behavior.vex_random_move",
+		"body": [
+			"\"minecraft:behavior.vex_random_move\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the mob to move around randomly like the Vex."
+	},
+	"behavior.wither_random_attack_pos_goal": {
+		"prefix": "behavior.wither_random_attack_pos_goal",
+		"body": [
+			"\"minecraft:behavior.wither_random_attack_pos_goal\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the wither to launch random attacks. Can only be used by the Wither Boss."
+	},
+	"behavior.wither_target_highest_damage": {
+		"prefix": "behavior.wither_target_highest_damage",
+		"body": [
+			"\"minecraft:behavior.wither_target_highest_damage\": {",
+			"\t\"entity_types\": $0",
+			"}"
+		],
+		"description": "Allows the wither to focus its attacks on whichever mob has dealt the most damage to it."
+	},
+	"boostable": {
+		"prefix": "boostable",
+		"body": [
+			"\"minecraft:boostable\": {",
+			"\t\"boost_items\": $0,",
+			"\t\"duration\": ${1:3},",
+			"\t\"speed_multiplier\": ${2:1.0}",
+			"}"
+		],
+		"description": "Defines the conditions and behavior of a rideable entity's boost"
+	},
+	"breathable": {
+		"prefix": "breathable",
+		"body": [
+			"\"minecraft:breathable\": {",
+			"\t\"breatheBlocks\": $0,",
+			"\t\"breathesAir\": ${1:true},",
+			"\t\"breathesLava\": ${2:false},",
+			"\t\"breathesSolids\": ${3:false},",
+			"\t\"breathesWater\": ${4:false},",
+			"\t\"generatesBubbles\": ${5:true},",
+			"\t\"nonBreatheBlocks\": $6,",
+			"\t\"suffocateTime\": ${7:-20},",
+			"\t\"totalSupply\": ${8:15}",
+			"}"
+		],
+		"description": "Defines what blocks this entity can breathe in and gives them the ability to suffocate"
+	},
+	"breedable": {
+		"prefix": "breedable",
+		"body": [
+			"\"minecraft:breedable\": {",
+			"\t\"allowSitting\": ${0:false},",
+			"\t\"breedCooldown\": ${1:60.0},",
+			"\t\"breedItems\": $2,",
+			"\t\"breedsWith\": $3,",
+			"\t\"extraBabyChance\": ${4:0.0},",
+			"\t\"inheritTamed\": ${5:true},",
+			"\t\"mutation_factor\": $6,",
+			"\t\"requireTame\": ${7:true}",
+			"}"
+		],
+		"description": "Defines the way an entity can get into the 'love' state."
+	},
+	"burns_in_daylight": {
+		"prefix": "burns_in_daylight",
+		"body": [
+			"\"minecraft:burns_in_daylight\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity burns if exposed to daylight."
+	},
+	"can_climb": {
+		"prefix": "can_climb",
+		"body": [
+			"\"minecraft:can_climb\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows this entity to climb up ladders."
+	},
+	"can_fly": {
+		"prefix": "can_fly",
+		"body": [
+			"\"minecraft:can_fly\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Marks the entity as being able to fly, the pathfinder won't be restricted to paths where a solid block is required underneath it."
+	},
+	"can_power_jump": {
+		"prefix": "can_power_jump",
+		"body": [
+			"\"minecraft:can_power_jump\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Allows the entity to power jump like the horse does in vanilla."
+	},
+	"collision_box": {
+		"prefix": "collision_box",
+		"body": [
+			"\"minecraft:collision_box\": {",
+			"\t\"height\": ${0:1.0},",
+			"\t\"width\": ${1:1.0}",
+			"}"
+		],
+		"description": "Sets the width and height of the Entity's collision box."
+	},
+	"color": {
+		"prefix": "color",
+		"body": [
+			"\"minecraft:color\": {",
+			"\t\"value\": ${0:0}",
+			"}"
+		],
+		"description": "Defines the entity's color. Only works on vanilla entities that have predefined color values (sheep, llama, shulker)."
+	},
+	"damage_sensor": {
+		"prefix": "damage_sensor",
+		"body": [
+			"\"minecraft:damage_sensor\": {",
+			"\t\"cause\": $0,",
+			"\t\"deals_damage\": ${1:true},",
+			"\t\"on_damage\": $2",
+			"}"
+		],
+		"description": "Defines what events to call when this entity is damaged by specific entities or items. Can be either an array or a single instance."
+	},
+	"default_look_angle": {
+		"prefix": "default_look_angle",
+		"body": [
+			"\"minecraft:default_look_angle\": {",
+			"\t\"value\": ${0:0.0f}",
+			"}"
+		],
+		"description": "Sets this entity's default head rotation angle."
+	},
+	"environment_sensor": {
+		"prefix": "environment_sensor",
+		"body": [
+			"\"minecraft:environment_sensor\": {",
+			"\t\"on_environment\": $0",
+			"}"
+		],
+		"description": "Creates a trigger based on environment conditions."
+	},
+	"equipment": {
+		"prefix": "equipment",
+		"body": [
+			"\"minecraft:equipment\": {",
+			"\t\"table\": $0",
+			"}"
+		],
+		"description": "Sets the Equipment table to use for this Entity."
+	},
+	"equippable": {
+		"prefix": "equippable",
+		"body": [
+			"\"minecraft:equippable\": {",
+			"\t\"slots\": $0",
+			"}"
+		],
+		"description": "Defines an entity's behavior for having items equipped to it"
+	},
+	"explode": {
+		"prefix": "explode",
+		"body": [
+			"\"minecraft:explode\": {",
+			"\t\"breaks_blocks\": ${0:true},",
+			"\t\"causesFire\": ${1:false},",
+			"\t\"destroyAffectedByGriefing\": ${2:false},",
+			"\t\"fireAffectedByGriefing\": ${3:false},",
+			"\t\"fuseLength\": ${4:[0.0, 0.0]},",
+			"\t\"fuseLit\": ${5:false},",
+			"\t\"maxResistance\": ${6:Infinite},",
+			"\t\"power\": ${7:3.0}",
+			"}"
+		],
+		"description": "Defines how the entity explodes."
+	},
+	"fire_immune": {
+		"prefix": "fire_immune",
+		"body": [
+			"\"minecraft:fire_immune\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity doesn't take damage from fire."
+	},
+	"floats_in_liquid": {
+		"prefix": "floats_in_liquid",
+		"body": [
+			"\"minecraft:floats_in_liquid\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity can float in liquid blocks."
+	},
+	"flying_speed": {
+		"prefix": "flying_speed",
+		"body": [
+			"\"minecraft:flying_speed\": {",
+			"\t\"value\": ${0:0.02}",
+			"}"
+		],
+		"description": "Speed in Blocks that this entity flies at."
+	},
+	"foot_size": {
+		"prefix": "foot_size",
+		"body": [
+			"\"minecraft:foot_size\": {",
+			"\t\"value\": ${0:0.5}",
+			"}"
+		],
+		"description": "Sets the number of blocks the entity can step without jumping."
+	},
+	"friction_modifier": {
+		"prefix": "friction_modifier",
+		"body": [
+			"\"minecraft:friction_modifier\": {",
+			"\t\"value\": ${0:1.0}",
+			"}"
+		],
+		"description": "Defines how much does friction affect this entity."
+	},
+	"ground_offset": {
+		"prefix": "ground_offset",
+		"body": [
+			"\"minecraft:ground_offset\": {",
+			"\t\"value\": ${0:0.0}",
+			"}"
+		],
+		"description": "Sets the offset from the ground that the entity is actually at."
+	},
+	"healable": {
+		"prefix": "healable",
+		"body": [
+			"\"minecraft:healable\": {",
+			"\t\"items\": $0",
+			"}"
+		],
+		"description": "Defines the interactions with this entity for healing it."
+	},
+	"hurt_when_wet": {
+		"prefix": "hurt_when_wet",
+		"body": [
+			"\"minecraft:hurt_when_wet\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity will take damage when it is wet."
+	},
+	"input_ground_controlled": {
+		"prefix": "input_ground_controlled",
+		"body": [
+			"\"minecraft:input_ground_controlled\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "When configured as a rideable entity, the entity will be controlled using WASD controls."
+	},
+	"interact": {
+		"prefix": "interact",
+		"body": [
+			"\"minecraft:interact\": {",
+			"\t\"add_items\": $0,",
+			"\t\"cooldown\": ${1:0.0},",
+			"\t\"hurt_item\": ${2:0},",
+			"\t\"interact_text\": $3,",
+			"\t\"on_interact\": $4,",
+			"\t\"particle_on_start\": $5,",
+			"\t\"play_sounds\": $6,",
+			"\t\"spawn_entities\": $7,",
+			"\t\"spawn_items\": $8,",
+			"\t\"swing\": ${9:false},",
+			"\t\"transform_to_item\": $10,",
+			"\t\"use_item\": ${11:false}",
+			"}"
+		],
+		"description": "Defines interactions with this entity."
+	},
+	"inventory": {
+		"prefix": "inventory",
+		"body": [
+			"\"minecraft:inventory\": {",
+			"\t\"additional_slots_per_strength\": ${0:0},",
+			"\t\"can_be_siphoned_from\": ${1:false},",
+			"\t\"container_type\": ${2:none},",
+			"\t\"inventory_size\": ${3:5},",
+			"\t\"linked_slots_size\": ${4:0},",
+			"\t\"private\": ${5:false},",
+			"\t\"restrict_to_owner\": ${6:false}",
+			"}"
+		],
+		"description": "Defines this entity's inventory properties."
+	},
+	"is_baby": {
+		"prefix": "is_baby",
+		"body": [
+			"\"minecraft:is_baby\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is a baby."
+	},
+	"is_charged": {
+		"prefix": "is_charged",
+		"body": [
+			"\"minecraft:is_charged\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is charged."
+	},
+	"is_chested": {
+		"prefix": "is_chested",
+		"body": [
+			"\"minecraft:is_chested\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is currently carrying a chest."
+	},
+	"is_dyeable": {
+		"prefix": "is_dyeable",
+		"body": [
+			"\"minecraft:is_dyeable\": {",
+			"\t\"interact_text\": $0",
+			"}"
+		],
+		"description": "Allows dyes to be used on this entity to change its color."
+	},
+	"is_ignited": {
+		"prefix": "is_ignited",
+		"body": [
+			"\"minecraft:is_ignited\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is currently on fire."
+	},
+	"is_saddled": {
+		"prefix": "is_saddled",
+		"body": [
+			"\"minecraft:is_saddled\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is currently saddled."
+	},
+	"is_shaking": {
+		"prefix": "is_shaking",
+		"body": [
+			"\"minecraft:is_shaking\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is currently shaking."
+	},
+	"is_sheared": {
+		"prefix": "is_sheared",
+		"body": [
+			"\"minecraft:is_sheared\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is currently sheared."
+	},
+	"is_stackable": {
+		"prefix": "is_stackable",
+		"body": [
+			"\"minecraft:is_stackable\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity can be stacked."
+	},
+	"is_tamed": {
+		"prefix": "is_tamed",
+		"body": [
+			"\"minecraft:is_tamed\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity is currently tamed."
+	},
+	"item_controllable": {
+		"prefix": "item_controllable",
+		"body": [
+			"\"minecraft:item_controllable\": {",
+			"\t\"control_items\": $0",
+			"}"
+		],
+		"description": "Defines what items can be used to control this entity while ridden"
+	},
+	"item_hopper": {
+		"prefix": "item_hopper",
+		"body": [
+			"\"minecraft:item_hopper\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Determines that this entity is an item hopper"
+	},
+	"jump.dynamic": {
+		"prefix": "jump.dynamic",
+		"body": [
+			"\"minecraft:jump.dynamic\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Defines a dynamic type jump control that will change jump properties based on the speed modifier of the mob."
+	},
+	"jump.static": {
+		"prefix": "jump.static",
+		"body": [
+			"\"minecraft:jump.static\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Gives the entity the ability to jump."
+	},
+	"leashable": {
+		"prefix": "leashable",
+		"body": [
+			"\"minecraft:leashable\": {",
+			"\t\"hard_distance\": ${0:6.0},",
+			"\t\"max_distance\": ${1:10.0},",
+			"\t\"on_leash\": $2,",
+			"\t\"on_unleash\": $3,",
+			"\t\"soft_distance\": ${4:4.0}",
+			"}"
+		],
+		"description": "Allows this entity to be leashed and Defines the conditions and events for this entity when is leashed."
+	},
+	"lookat": {
+		"prefix": "lookat",
+		"body": [
+			"\"minecraft:lookat\": {",
+			"\t\"filters\": ${0:player},",
+			"\t\"look_cooldown\": ${1:[0.0, 0.0]},",
+			"\t\"look_event\": $2,",
+			"\t\"mAllowInvulnerable\": ${3:false},",
+			"\t\"searchRadius\": ${4:10.0},",
+			"\t\"setTarget\": ${5:true}",
+			"}"
+		],
+		"description": "Defines the behavior when another entity looks at this entity."
+	},
+	"loot": {
+		"prefix": "loot",
+		"body": [
+			"\"minecraft:loot\": {",
+			"\t\"table\": $0",
+			"}"
+		],
+		"description": "Sets the loot table for what items this entity drops upon death."
+	},
+	"mark_variant": {
+		"prefix": "mark_variant",
+		"body": [
+			"\"minecraft:mark_variant\": {",
+			"\t\"value\": ${0:0}",
+			"}"
+		],
+		"description": "Additional variant value. Can be used to further differentiate variants."
+	},
+	"movement.basic": {
+		"prefix": "movement.basic",
+		"body": [
+			"\"minecraft:movement.basic\": {",
+			"\t\"max_turn\": ${0:30.0}",
+			"}"
+		],
+		"description": "This component accents the movement of an entity."
+	},
+	"movement.fly": {
+		"prefix": "movement.fly",
+		"body": [
+			"\"minecraft:movement.fly\": {",
+			"\t\"max_turn\": ${0:30.0}",
+			"}"
+		],
+		"description": "This move control causes the mob to fly."
+	},
+	"movement.generic": {
+		"prefix": "movement.generic",
+		"body": [
+			"\"minecraft:movement.generic\": {",
+			"\t\"max_turn\": ${0:30.0}",
+			"}"
+		],
+		"description": "This move control allows a mob to fly, swim, climb, etc."
+	},
+	"movement.jump": {
+		"prefix": "movement.jump",
+		"body": [
+			"\"minecraft:movement.jump\": {",
+			"\t\"jump_delay\": ${0:[0.0, 0.0]},",
+			"\t\"max_turn\": ${1:30.0}",
+			"}"
+		],
+		"description": "Move control that causes the mob to jump as it moves with a specified delay between jumps."
+	},
+	"movement.skip": {
+		"prefix": "movement.skip",
+		"body": [
+			"\"minecraft:movement.skip\": {",
+			"\t\"max_turn\": ${0:30.0}",
+			"}"
+		],
+		"description": "This move control causes the mob to hop as it moves."
+	},
+	"movement.sway": {
+		"prefix": "movement.sway",
+		"body": [
+			"\"minecraft:movement.sway\": {",
+			"\t\"max_turn\": ${0:30.0}",
+			"}"
+		],
+		"description": "This move control causes the mob to sway side to side giving the impression it is swimming."
+	},
+	"nameable": {
+		"prefix": "nameable",
+		"body": [
+			"\"minecraft:nameable\": {",
+			"\t\"allowNameTagRenaming\": ${0:true},",
+			"\t\"alwaysShow\": ${1:false},",
+			"\t\"default_trigger\": $2,",
+			"\t\"name_actions\": $3",
+			"}"
+		],
+		"description": "Allows this entity to be named (e.g. using a name tag)"
+	},
+	"navigation.climb": {
+		"prefix": "navigation.climb",
+		"body": [
+			"\"minecraft:navigation.climb\": {",
+			"\t\"avoid_portals\": ${0:false},",
+			"\t\"avoid_sun\": ${1:false},",
+			"\t\"avoid_water\": ${2:false},",
+			"\t\"can_float\": ${3:false},",
+			"\t\"can_open_doors\": ${4:false},",
+			"\t\"can_pass_doors\": ${5:true}",
+			"}"
+		],
+		"description": "Allows this entity to generate paths that include vertical walls like the vanilla Spiders do."
+	},
+	"navigation.float": {
+		"prefix": "navigation.float",
+		"body": [
+			"\"minecraft:navigation.float\": {",
+			"\t\"avoid_portals\": ${0:false},",
+			"\t\"avoid_sun\": ${1:false},",
+			"\t\"avoid_water\": ${2:false},",
+			"\t\"can_float\": ${3:false},",
+			"\t\"can_open_doors\": ${4:false},",
+			"\t\"can_pass_doors\": ${5:true}",
+			"}"
+		],
+		"description": "Allows this entity to generate paths by flying around the air like the regular Ghast."
+	},
+	"navigation.fly": {
+		"prefix": "navigation.fly",
+		"body": [
+			"\"minecraft:navigation.fly\": {",
+			"\t\"avoid_portals\": ${0:false},",
+			"\t\"avoid_sun\": ${1:false},",
+			"\t\"avoid_water\": ${2:false},",
+			"\t\"can_float\": ${3:false},",
+			"\t\"can_open_doors\": ${4:false},",
+			"\t\"can_pass_doors\": ${5:true}",
+			"}"
+		],
+		"description": "Allows this entity to generate paths in the air like the vanilla Parrots do."
+	},
+	"navigation.generic": {
+		"prefix": "navigation.generic",
+		"body": [
+			"\"minecraft:navigation.generic\": {",
+			"\t\"avoid_portals\": ${0:false},",
+			"\t\"avoid_sun\": ${1:false},",
+			"\t\"avoid_water\": ${2:false},",
+			"\t\"can_float\": ${3:false},",
+			"\t\"can_open_doors\": ${4:false},",
+			"\t\"can_pass_doors\": ${5:true}",
+			"}"
+		],
+		"description": "Allows this entity to generate paths by walking, swimming, flying and/or climbing around and jumping up and down a block."
+	},
+	"navigation.swim": {
+		"prefix": "navigation.swim",
+		"body": [
+			"\"minecraft:navigation.swim\": {",
+			"\t\"avoid_portals\": ${0:false},",
+			"\t\"avoid_sun\": ${1:false},",
+			"\t\"avoid_water\": ${2:false},",
+			"\t\"can_float\": ${3:false},",
+			"\t\"can_open_doors\": ${4:false},",
+			"\t\"can_pass_doors\": ${5:true}",
+			"}"
+		],
+		"description": "Allows this entity to generate paths that include water."
+	},
+	"navigation.walk": {
+		"prefix": "navigation.walk",
+		"body": [
+			"\"minecraft:navigation.walk\": {",
+			"\t\"avoid_portals\": ${0:false},",
+			"\t\"avoid_sun\": ${1:false},",
+			"\t\"avoid_water\": ${2:false},",
+			"\t\"can_float\": ${3:false},",
+			"\t\"can_open_doors\": ${4:false},",
+			"\t\"can_pass_doors\": ${5:true}",
+			"}"
+		],
+		"description": "Allows this entity to generate paths by walking around and jumping up and down a block like regular mobs."
+	},
+	"on_death": {
+		"prefix": "on_death",
+		"body": [
+			"\"minecraft:on_death\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Only usable by the Ender Dragon. Adds a trigger to call on this entity's death."
+	},
+	"on_friendly_anger": {
+		"prefix": "on_friendly_anger",
+		"body": [
+			"\"minecraft:on_friendly_anger\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Adds a trigger that will run when a nearby entity of the same type as this entity becomes Angry."
+	},
+	"on_hurt": {
+		"prefix": "on_hurt",
+		"body": [
+			"\"minecraft:on_hurt\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Adds a trigger to call when this entity takes damage."
+	},
+	"on_hurt_by_player": {
+		"prefix": "on_hurt_by_player",
+		"body": [
+			"\"minecraft:on_hurt_by_player\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Adds a trigger to call when this entity is attacked by the player."
+	},
+	"on_ignite": {
+		"prefix": "on_ignite",
+		"body": [
+			"\"minecraft:on_ignite\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Adds a trigger to call when this entity is set on fire."
+	},
+	"on_start_landing": {
+		"prefix": "on_start_landing",
+		"body": [
+			"\"minecraft:on_start_landing\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Only usable by the Ender Dragon. Adds a trigger to call when this entity lands."
+	},
+	"on_start_takeoff": {
+		"prefix": "on_start_takeoff",
+		"body": [
+			"\"minecraft:on_start_takeoff\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Only usable by the Ender Dragon. Adds a trigger to call when this entity starts flying."
+	},
+	"on_target_acquired": {
+		"prefix": "on_target_acquired",
+		"body": [
+			"\"minecraft:on_target_acquired\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Adds a trigger to call when this entity finds a target."
+	},
+	"on_target_escape": {
+		"prefix": "on_target_escape",
+		"body": [
+			"\"minecraft:on_target_escape\": {",
+			"\t\"event\": $0,",
+			"\t\"filters\": $1,",
+			"\t\"target\": ${2:self}",
+			"}"
+		],
+		"description": "Adds a trigger to call when this entity loses the target it currently has."
+	},
+	"peek": {
+		"prefix": "peek",
+		"body": [
+			"\"minecraft:peek\": {",
+			"\t\"on_close\": $0,",
+			"\t\"on_open\": $1,",
+			"\t\"on_target_open\": $2",
+			"}"
+		],
+		"description": "Defines the entity's 'peek' behavior, defining the events that should be called during it"
+	},
+	"projectile": {
+		"prefix": "projectile",
+		"body": [
+			"\"minecraft:projectile\": {",
+			"\t\"angleoffset\": ${0:0.0},",
+			"\t\"catchFire\": ${1:false},",
+			"\t\"critParticleOnHurt\": ${2:false},",
+			"\t\"destroyOnHurt\": ${3:false},",
+			"\t\"filter\": $4,",
+			"\t\"fireAffectedByGriefing\": ${5:false},",
+			"\t\"gravity\": ${6:0.05},",
+			"\t\"hitSound\": $7,",
+			"\t\"homing\": ${8:false},",
+			"\t\"inertia\": ${9:0.99},",
+			"\t\"isdangerous\": ${10:false},",
+			"\t\"knockback\": ${11:true},",
+			"\t\"lightning\": ${12:false},",
+			"\t\"liquid_inertia\": ${13:0.6},",
+			"\t\"offset\": ${14:[0.0, 0.5, 0.0]},",
+			"\t\"onFireTime\": ${15:5.0},",
+			"\t\"particle\": ${16:iconcrack},",
+			"\t\"potionEffect\": ${17:-1},",
+			"\t\"power\": ${18:1.3},",
+			"\t\"reflectOnHurt\": ${19:false},",
+			"\t\"semirandomdiffdamage\": ${20:false},",
+			"\t\"shootSound\": $21,",
+			"\t\"shoottarget\": ${22:true},",
+			"\t\"shouldbounce\": ${23:false},",
+			"\t\"splashPotion\": ${24:false},",
+			"\t\"splashRange\": ${25:4.0},",
+			"\t\"uncertaintyBase\": ${26:0.0},",
+			"\t\"uncertaintyMultiplier\": ${27:0.0}",
+			"}"
+		],
+		"description": "Allows the entity to be a thrown entity."
+	},
+	"push_through": {
+		"prefix": "push_through",
+		"body": [
+			"\"minecraft:push_through\": {",
+			"\t\"value\": ${0:0.0}",
+			"}"
+		],
+		"description": "Sets the distance through which the entity can push through."
+	},
+	"rail_movement": {
+		"prefix": "rail_movement",
+		"body": [
+			"\"minecraft:rail_movement\": {",
+			"\t\"max_speed\": ${0:0.4}",
+			"}"
+		],
+		"description": "Defines the entity's movement on the rails. An entity with this component is only allowed to move on the rail."
+	},
+	"rail_sensor": {
+		"prefix": "rail_sensor",
+		"body": [
+			"\"minecraft:rail_sensor\": {",
+			"\t\"check_block_types\": ${0:false},",
+			"\t\"eject_on_activate\": ${1:true},",
+			"\t\"eject_on_deactivate\": ${2:false},",
+			"\t\"on_activate\": $3,",
+			"\t\"on_deactivate\": $4,",
+			"\t\"tick_command_block_on_activate\": ${5:true},",
+			"\t\"tick_command_block_on_deactivate\": ${6:false}",
+			"}"
+		],
+		"description": "Defines the behavior of the entity when the rail gets activated or deactivated."
+	},
+	"rideable": {
+		"prefix": "rideable",
+		"body": [
+			"\"minecraft:rideable\": {",
+			"\t\"controlling_seat\": ${0:0},",
+			"\t\"crouching_skip_interact\": ${1:true},",
+			"\t\"family_types\": $2,",
+			"\t\"interact_text\": $3,",
+			"\t\"pull_in_entities\": ${4:false},",
+			"\t\"seat_count\": ${5:1},",
+			"\t\"seats\": $6",
+			"}"
+		],
+		"description": "Determines whether this entity can be ridden. Allows specifying the different seat positions and quantity."
+	},
+	"scale": {
+		"prefix": "scale",
+		"body": [
+			"\"minecraft:scale\": {",
+			"\t\"value\": ${0:1.0}",
+			"}"
+		],
+		"description": "Sets the entity's visual size."
+	},
+	"scale_by_age": {
+		"prefix": "scale_by_age",
+		"body": [
+			"\"minecraft:scale_by_age\": {",
+			"\t\"end_scale\": ${0:1.0},",
+			"\t\"start_scale\": ${1:1.0}",
+			"}"
+		],
+		"description": "Defines the entity's size interpolation based on the entity's age."
+	},
+	"shareables": {
+		"prefix": "shareables",
+		"body": [
+			"\"minecraft:shareables\": {",
+			"\t\"craft_into\": $0,",
+			"\t\"item\": $1,",
+			"\t\"surplus_amount\": ${2:-1},",
+			"\t\"want_amount\": ${3:-1}",
+			"}"
+		],
+		"description": "Defines a list of items the mob wants to share. Each item must have the following parameters:"
+	},
+	"shooter": {
+		"prefix": "shooter",
+		"body": [
+			"\"minecraft:shooter\": {",
+			"\t\"auxVal\": ${0:-1},",
+			"\t\"def\": $1",
+			"}"
+		],
+		"description": "Defines the entity's ranged attack behavior."
+	},
+	"sittable": {
+		"prefix": "sittable",
+		"body": [
+			"\"minecraft:sittable\": {",
+			"\t\"sit_event\": $0,",
+			"\t\"stand_event\": $1",
+			"}"
+		],
+		"description": "Defines the entity's 'sit' state."
+	},
+	"sound_volume": {
+		"prefix": "sound_volume",
+		"body": [
+			"\"minecraft:sound_volume\": {",
+			"\t\"value\": ${0:1.0}",
+			"}"
+		],
+		"description": "Sets the entity's base volume for sound effects."
+	},
+	"spawn_entity": {
+		"prefix": "spawn_entity",
+		"body": [
+			"\"minecraft:spawn_entity\": {",
+			"\t\"max_wait_time\": ${0:600},",
+			"\t\"min_wait_time\": ${1:300},",
+			"\t\"spawn_entity\": $2,",
+			"\t\"spawn_event\": ${3:minecraft:entity_born},",
+			"\t\"spawn_item\": ${4:egg},",
+			"\t\"spawn_method\": ${5:born},",
+			"\t\"spawn_sound\": ${6:plop}",
+			"}"
+		],
+		"description": "Adds a timer after which this entity will spawn another entity or item (similar to vanilla's chicken's egg-laying behavior)."
+	},
+	"spell_effects": {
+		"prefix": "spell_effects",
+		"body": [
+			"\"minecraft:spell_effects\": {",
+			"\t\"add_effects\": $0,",
+			"\t\"remove_effects\": $1",
+			"}"
+		],
+		"description": "Defines what mob effects to add and remove to the entity when adding this component."
+	},
+	"strength": {
+		"prefix": "strength",
+		"body": [
+			"\"minecraft:strength\": {",
+			"\t\"max\": ${0:5},",
+			"\t\"value\": ${1:1}",
+			"}"
+		],
+		"description": "Defines the entity's strength to carry items."
+	},
+	"tameable": {
+		"prefix": "tameable",
+		"body": [
+			"\"minecraft:tameable\": {",
+			"\t\"probability\": ${0:1.0},",
+			"\t\"tameItems\": $1,",
+			"\t\"tame_event\": $2",
+			"}"
+		],
+		"description": "Defines the rules for a mob to be tamed by the player."
+	},
+	"tamemount": {
+		"prefix": "tamemount",
+		"body": [
+			"\"minecraft:tamemount\": {",
+			"\t\"attemptTemperMod\": ${0:5},",
+			"\t\"autoRejectItems\": $1,",
+			"\t\"feedItems\": $2,",
+			"\t\"feed_text\": $3,",
+			"\t\"maxTemper\": ${4:100},",
+			"\t\"minTemper\": ${5:0},",
+			"\t\"ride_text\": $6,",
+			"\t\"tame_event\": $7",
+			"}"
+		],
+		"description": "Allows the Entity to be tamed by mounting it."
+	},
+	"target_nearby_sensor": {
+		"prefix": "target_nearby_sensor",
+		"body": [
+			"\"minecraft:target_nearby_sensor\": {",
+			"\t\"inside_range\": ${0:1.0},",
+			"\t\"on_inside_range\": $1,",
+			"\t\"on_outside_range\": $2,",
+			"\t\"outside_range\": ${3:5.0}",
+			"}"
+		],
+		"description": "Defines the entity's range within which it can see or sense other entities to target them."
+	},
+	"teleport": {
+		"prefix": "teleport",
+		"body": [
+			"\"minecraft:teleport\": {",
+			"\t\"darkTeleportChance\": ${0:0.01},",
+			"\t\"lightTeleportChance\": ${1:0.01},",
+			"\t\"maxRandomTeleportTime\": ${2:20.0},",
+			"\t\"minRandomTeleportTime\": ${3:0.0},",
+			"\t\"randomTeleportCube\": ${4:[32.0, 16.0, 32.0]},",
+			"\t\"randomTeleports\": ${5:true},",
+			"\t\"targetDistance\": ${6:16.0},",
+			"\t\"target_teleport_chance\": ${7:1.0}",
+			"}"
+		],
+		"description": "Defines an entity's teleporting behavior."
+	},
+	"tick_world": {
+		"prefix": "tick_world",
+		"body": [
+			"\"minecraft:tick_world\": {",
+			"\t\"distance_to_players\": ${0:128},",
+			"\t\"never_despawn\": ${1:true},",
+			"\t\"radius\": ${2:2}",
+			"}"
+		],
+		"description": "Defines if the entity ticks the world and the radius around it to tick."
+	},
+	"timer": {
+		"prefix": "timer",
+		"body": [
+			"\"minecraft:timer\": {",
+			"\t\"looping\": ${0:true},",
+			"\t\"randomInterval\": ${1:true},",
+			"\t\"time\": ${2:[0.0, 0.0]},",
+			"\t\"time_down_event\": $3",
+			"}"
+		],
+		"description": "Adds a timer after which an event will fire."
+	},
+	"trade_table": {
+		"prefix": "trade_table",
+		"body": [
+			"\"minecraft:trade_table\": {",
+			"\t\"display_name\": $0,",
+			"\t\"table\": $1",
+			"}"
+		],
+		"description": "Defines this entity's ability to trade with players."
+	},
+	"transformation": {
+		"prefix": "transformation",
+		"body": [
+			"\"minecraft:transformation\": {",
+			"\t\"add\": $0,",
+			"\t\"begin_transform_sound\": $1,",
+			"\t\"delay\": $2,",
+			"\t\"drop_equipment\": $3,",
+			"\t\"into\": $4,",
+			"\t\"transformation_sound\": $5",
+			"}"
+		],
+		"description": "Defines an entity's transformation from the current definition into another"
+	},
+	"type_family": {
+		"prefix": "type_family",
+		"body": [
+			"\"minecraft:type_family\": {",
+			"\t\"family\": $0",
+			"}"
+		],
+		"description": "Defines the families this entity belongs to."
+	},
+	"variant": {
+		"prefix": "variant",
+		"body": [
+			"\"minecraft:variant\": {",
+			"\t\"value\": ${0:0}",
+			"}"
+		],
+		"description": "Used to differentiate the component group of a variant of an entity from others (e.g. ocelot, villager)"
+	},
+	"walk_animation_speed": {
+		"prefix": "walk_animation_speed",
+		"body": [
+			"\"minecraft:walk_animation_speed\": {",
+			"\t\"value\": ${0:1.0}",
+			"}"
+		],
+		"description": "Sets the speed multiplier for this entity's walk animation speed."
+	},
+	"wants_jockey": {
+		"prefix": "wants_jockey",
+		"body": [
+			"\"minecraft:wants_jockey\": {",
+			"\t$0",
+			"}"
+		],
+		"description": "Sets that this entity wants to become a jockey."
+	}
+}
