@@ -12,22 +12,22 @@
     ],
     "contributes": {
         "languages": [{
-            "id": "json",
-            "aliases": ["Minecraft JSON", "mc json"],
+            "id": "mc_json",
+            "aliases": ["Minecraft JSON", "mc_json"],
             "extensions": [".json"],
             "configuration": "./language-configuration.json"
         }],
         "snippets": [
             {
-                "language": "json",
+                "language": "mc_json",
                 "path": "./snippets/other.json"
             },
             {
-                "language": "json",
+                "language": "mc_json",
                 "path": "./snippets/components.json"
             },
             {
-                "language": "json",
+                "language": "mc_json",
                 "path": "./snippets/undocumented_components.json"
             }
         ]
