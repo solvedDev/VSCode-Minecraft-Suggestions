@@ -3,9 +3,9 @@
 		"prefix": "health",
 		"body": [
 			"\"minecraft:health\": {",
-			"\t\"value\": ${0:20},",
-			"\t\"max\": ${1:20}",
-			"}"
+			"\t\"value\": ${1:20},",
+			"\t\"max\": ${2:20}",
+			"}$0"
 		],
 		"description": "Set the health of an entity."
 	},
@@ -13,8 +13,8 @@
 		"prefix": "movement",
 		"body": [
 			"\"minecraft:movement\": {",
-			"\t\"value\": ${0:1}",
-			"}"
+			"\t\"value\": ${1:1}",
+			"}$0"
 		],
 		"description": "Set the movement speed of an entity."
 	},
@@ -22,8 +22,8 @@
 		"prefix": "identifier",
 		"body": [
 			"\"minecraft:identifier\": {",
-			"\t\"id\": $0",
-			"}"
+			"\t\"id\": $1",
+			"}$0"
 		],
 		"description": "Set the identifier (id) of an entity."
 	},
@@ -31,9 +31,9 @@
 		"prefix": "physics",
 		"body": [
 			"\"minecraft:physics\": {",
-			"\t\"has_collison\": ${0:true},",
-			"\t\"has_gravity\": ${1:true}",
-			"}"
+			"\t\"has_collison\": ${1:true},",
+			"\t\"has_gravity\": ${2:true}",
+			"}$0"
 		],
 		"description": "Modify the physics of an entity."
 	},
@@ -41,8 +41,8 @@
 		"prefix": "fall_damage",
 		"body": [
 			"\"minecraft:fall_damage\": {",
-			"\t\"value\": ${0:1.0}",
-			"}"
+			"\t\"value\": ${1:1.0}",
+			"}$0"
 		],
 		"description": "Modify the fall damage of an entity."
 	},
@@ -50,9 +50,9 @@
 		"prefix": "follow_range",
 		"body": [
 			"\"minecraft:follow_range\": {",
-			"\t\"value\": ${0:1.0},",
-			"\t\"max\": ${1:1.0}",
-			"}"
+			"\t\"value\": ${1:1.0},",
+			"\t\"max\": ${2:1.0}",
+			"}$0"
 		],
 		"description": "Define a follow range for the follow_owner component."
 	},
@@ -61,10 +61,10 @@
 		"body": [
 			"\"minecraft:horse.jump_strength\": {",
 			"\t\"value\": {",
-			"\t\t\"range_max\": ${0:1.0},",
-			"\t\t\"range_min\": ${1:1.0}",
+			"\t\t\"range_max\": ${1:1.0},",
+			"\t\t\"range_min\": ${2:1.0}",
 			"\t}",
-			"}"
+			"}$0"
 		],
 		"description": "Define the jump strength of a horse."
 	},
@@ -72,9 +72,9 @@
 		"prefix": "knockback_resistance",
 		"body": [
 			"\"minecraft:knockback_resistance\": {",
-			"\t\"value\": ${0:1.0},",
-			"\t\"max\": ${1:1.0}",
-			"}"
+			"\t\"value\": ${1:1.0},",
+			"\t\"max\": ${2:1.0}",
+			"}$0"
 		],
 		"description": "Modify the knockback resistance of an entity."
 	},
@@ -82,10 +82,49 @@
 		"prefix": "underwater_movement",
 		"body": [
 			"\"minecraft:underwater_movement\": {",
-			"\t\"value\": ${0:1.0},",
-			"\t\"max\": ${1:1.0}",
-			"}"
+			"\t\"value\": ${1:1.0},",
+			"\t\"max\": ${2:1.0}",
+			"}$0"
 		],
 		"description": "Modify the underwater movement of an entity."
+	},
+	"player.experience": {
+		"prefix": "player.experience",
+		"body": [
+			"\"minecraft:player.experience\": {",
+			"\t\"value\": ${1:0},",
+			"\t\"max\": ${2:1}",
+			"}$0"
+		],
+		"description": "Set the player's experience."
+	},
+	"player.level": {
+		"prefix": "player.level",
+		"body": [
+			"\"minecraft:player.level\": {",
+			"\t\"value\": ${1:0},",
+			"\t\"max\": ${2:24791}",
+			"}$0"
+		],
+		"description": "Set the player's level."
+	},
+	"player.exhaustion": {
+		"prefix": "player.exhaustion",
+		"body": [
+			"\"minecraft:player.exhaustion\": {",
+			"\t\"value\": ${1:0},",
+			"\t\"max\": ${2:4}",
+			"}$0"
+		],
+		"description": "Set the player's exhaustion."
+	},
+	"player.saturation": {
+		"prefix": "player.saturation",
+		"body": [
+			"\"minecraft:player.saturation\": {",
+			"\t\"value\": ${1:20}"
+			"}$0"
+		],
+		"description": "Set the player's saturation."
 	}
 }
