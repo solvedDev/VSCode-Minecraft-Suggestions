@@ -22,9 +22,15 @@
 	"format_version": {
 		"prefix": "format_version",
 		"body": [
-			"format_version: ${0:\"1.2.0\"},"
+			"format_version: ${1:\"1.2.0\"},$0"
 		]
 	},
+	"do_not_upgrade": {
+		"prefix": "do_not_upgrade",
+		"body": [
+			"do_not_upgrade: {},$0"
+		]
+	}
 	"components": {
 		"prefix": "components",
 		"body": [
@@ -57,6 +63,19 @@
 			"}"
 		]
 	},
+	"filters": {
+		"prefix": "filters",
+		"body": [
+			"\"filters\": {",
+			"\t\"all_of\": [",
+			"\t\t$1",
+			"\t],",
+			"\t\"any_of\": [",
+			"\t\t$2",
+			"\t]",
+			"}$0"
+		]
+	},
 	"add": {
 		"prefix": "add",
 		"body": [
@@ -71,6 +90,267 @@
 			"\"remove\": {",
 			"\t$0",
 			"}"
+		]
+	},
+
+	//Filters
+	"clock_time": {
+		"prefix": "clock_time",
+		"description": "Compares the current time with a float value in the range (0.0, 1.0). 0.0= Noon 0.25= Sunset 0.5= Midnight 0.75= Sunrise",
+		"body": [
+			"{ \"test\": \"clock_time\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"has_ability": {
+		"prefix": "has_ability",
+		"description": "Returns true when the subject entity has the named ability.",
+		"body": [
+			"{ \"test\": \"has_ability\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|flySpeed,flying,instabuild,invulnerable,lightning,mayfly,mute,noclip,walkSpeed,worldbuilder|}\" }"
+		]
+	},
+	"has_component": {
+		"prefix": "has_component",
+		"description": "Returns true when the subject entity contains the named component.",
+		"body": [
+			"{ \"test\": \"has_component\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|minecraft:,minecraft:effect.,minecraft:attack,minecraft:spell_effects,minecraft:strength,minecraft:ambient_sound_interval,minecraft:burns_in_daylight,minecraft:can_climb,minecraft:can_fly,minecraft:can_power_jump,minecraft:collision_box,minecraft:color,minecraft:color2,minecraft:default_look_angle,minecraft:equipment,minecraft:fire_immune,minecraft:floats_in_liquid,minecraft:flying_speed,minecraft:foot_size,minecraft:friction_modifier,minecraft:ground_offset,minecraft:hurt_when_wet,minecraft:input_ground_controlled,minecraft:is_baby,minecraft:is_charged,minecraft:is_chested,minecraft:is_dyeable,minecraft:is_ignited,minecraft:is_saddled,minecraft:is_shaking,minecraft:is_sheared,minecraft:is_stackable,minecraft:is_tamed,minecraft:item_controllable,minecraft:loot,minecraft:mark_variant,minecraft:push_through,minecraft:scale,minecraft:sound_volume,minecraft:type_family,minecraft:variant,minecraft:walk_animation_speed,minecraft:wants_jockey,minecraft:addrider,minecraft:ageable,minecraft:angry,minecraft:boostable,minecraft:breathable,minecraft:breedable,minecraft:damage_over_time,minecraft:damage_sensor,minecraft:environment_sensor,minecraft:equippable,minecraft:explode,minecraft:healable,minecraft:interact,minecraft:inventory,minecraft:item_hopper,minecraft:jump.dynamic,minecraft:jump.static,minecraft:leashable,minecraft:lookat,minecraft:movement.basic,minecraft:movement.fly,minecraft:movement.generic,minecraft:movement.jump,minecraft:movement.skip,minecraft:movement.sway,minecraft:nameable,minecraft:navigation.climb,minecraft:navigation.float,minecraft:navigation.fly,minecraft:navigation.generic,minecraft:navigation.swim,minecraft:navigation.walk,minecraft:peek,minecraft:projectile,minecraft:rail_movement,minecraft:rail_sensor,minecraft:rideable,minecraft:scale_by_age,minecraft:shareables,minecraft:shooter,minecraft:sittable,minecraft:spawn_entity,minecraft:tameable,minecraft:tamemount,minecraft:target_nearby_sensor,minecraft:teleport,minecraft:tick_world,minecraft:timer,minecraft:trade_table,minecraft:transformation,minecraft:behavior.avoid_mob_type,minecraft:behavior.beg,minecraft:behavior.break_door,minecraft:behavior.breed,minecraft:behavior.charge_attack,minecraft:behavior.controlled_by_player,minecraft:behavior.defend_village_target,minecraft:behavior.door_interact,minecraft:behavior.dragonchargeplayer,minecraft:behavior.dragondeath,minecraft:behavior.dragonflaming,minecraft:behavior.dragonholdingpattern,minecraft:behavior.dragonlanding,minecraft:behavior.dragonscanning,minecraft:behavior.dragonstrafeplayer,minecraft:behavior.dragontakeoff,minecraft:behavior.eat_block,minecraft:behavior.enderman_leave_block,minecraft:behavior.enderman_take_block,minecraft:behavior.find_mount,minecraft:behavior.flee_sun,minecraft:behavior.float,minecraft:behavior.float_wander,minecraft:behavior.follow_caravan,minecraft:behavior.follow_mob,minecraft:behavior.follow_owner,minecraft:behavior.follow_parent,minecraft:behavior.guardian_attack,minecraft:behavior.harvest_farm_block,minecraft:behavior.hurt_by_target,minecraft:behavior.leap_at_target,minecraft:behavior.look_at_entity,minecraft:behavior.look_at_player,minecraft:behavior.look_at_target,minecraft:behavior.look_at_trading_player,minecraft:behavior.make_love,minecraft:behavior.melee_attack,minecraft:behavior.mount_pathing,minecraft:behavior.move_indoors,minecraft:behavior.move_through_village,minecraft:behavior.move_to_water,minecraft:behavior.move_towards_restriction,minecraft:behavior.move_towards_target,minecraft:behavior.nearest_attackable_target,minecraft:behavior.ocelot_sit_on_block,minecraft:behavior.ocelotattack,minecraft:behavior.offer_flower,minecraft:behavior.open_door,minecraft:behavior.owner_hurt_by_target,minecraft:behavior.owner_hurt_target,minecraft:behavior.panic,minecraft:behavior.peek,minecraft:behavior.pickup_items,minecraft:behavior.play,minecraft:behavior.player_ride_tamed,minecraft:behavior.raid_garden,minecraft:behavior.random_breach,minecraft:behavior.random_fly,minecraft:behavior.random_look_around,minecraft:behavior.random_stroll,minecraft:behavior.random_swim,minecraft:behavior.ranged_attack,minecraft:behavior.receive_love,minecraft:behavior.restrict_open_door,minecraft:behavior.restrict_sun,minecraft:behavior.run_around_like_crazy,minecraft:behavior.send_event,minecraft:behavior.share_items,minecraft:behavior.silverfish_merge_with_stone,minecraft:behavior.silverfish_wake_up_friends,minecraft:behavior.skeleton_horse_trap,minecraft:behavior.slime_attack,minecraft:behavior.slime_float,minecraft:behavior.slime_keep_on_jumping,minecraft:behavior.slime_random_direction,minecraft:behavior.squid_dive,minecraft:behavior.squid_flee,minecraft:behavior.squid_idle,minecraft:behavior.squid_move_away_from_ground,minecraft:behavior.squid_out_of_water,minecraft:behavior.stay_while_sitting,minecraft:behavior.stomp_attack,minecraft:behavior.summon_entity,minecraft:behavior.swell,minecraft:behavior.swim_wander,minecraft:behavior.take_flower,minecraft:behavior.tempt,minecraft:behavior.trade_with_player,minecraft:behavior.vex_copy_owner_target,minecraft:behavior.vex_random_move,minecraft:behavior.wither_random_attack_pos_goal,minecraft:behavior.wither_target_highest_damage|}\" }"
+		]
+	},
+	"has_effect": {
+		"prefix": "has_effect",
+		"description": "Returns true when the subject entity has the named status effect.",
+		"body": [
+			"{ \"test\": \"has_component\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"minecraft:effect.${3|absorption,blindness,fatal_poison,fire_resistance,haste,health_boost,hunger,instant_damage,instant_health,invisibility,jump_boost,levitation,mining_fatigue,nausea,night_vision,poison,regeneration,resistance,saturation,slowness,speed,strength,water_breathing,weakness,wither|}\" }"
+		]
+	},
+	"has_damage": {
+		"prefix": "has_damage",
+		"description": "Returns true when the subject entity receives the named damage type.",
+		"body": [
+			"{ \"test\": \"has_damage\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|all,anvil,any,attack,block_explosion,contact,drowning,entity_explosion,fall,falling_block,fatal,fire,fire_tick,fly_into_wall,lava,magic,none,override,piston,projectile,starve,suffocation,suicide,thorns,void,wither|}\" }"
+		]
+	},
+	"has_equipment": {
+		"prefix": "has_equipment",
+		"description": "Tests for the presence of a named item in the designated slot of the subject entity.",
+		"body": [
+			"{ \"test\": \"has_equipment\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"domain\": "${3:hand}", \"value\": \"$4\" }"
+		]
+	},
+	"in_caravan": {
+		"prefix": "in_caravan",
+		"description": "Returns true if the subject entity is in a caravan.",
+		"body": [
+			"{ \"test\": \"in_caravan\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"in_clouds": {
+		"prefix": "in_clouds",
+		"description": "Returns true when the subject entity is in the clouds.",
+		"body": [
+			"{ \"test\": \"in_clouds\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"in_lava": {
+		"prefix": "in_lava",
+		"description": "Returns true when the subject entity is in lava.",
+		"body": [
+			"{ \"test\": \"in_lava\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"in_water": {
+		"prefix": "in_water",
+		"description": "Returns true when the subject entity is in water.",
+		"body": [
+			"{ \"test\": \"in_water\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"in_water_or_rain": {
+		"prefix": "in_water_or_rain",
+		"description": "Returns true when the subject entity is in water or rain.",
+		"body": [
+			"{ \"test\": \"in_water_or_rain\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_altitude": {
+		"prefix": "is_altitude",
+		"description": "Tests the current altitude against a provided value. 0= bedrock elevation.",
+		"body": [
+			"{ \"test\": \"is_altitude\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"is_biome": {
+		"prefix": "is_biome",
+		"description": "Tests whether the Subject is currently in the named biome.",
+		"body": [
+			"{ \"test\": \"is_biome\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|beach,desert,extreme_hills,flat,forest,ice,jungle,mesa,mushroom_island,ocean,plain,river,savanna,stone_beach,swamp,taiga,the_end,the_nether|}\" }"
+		]
+	},
+	"is_brightness": {
+		"prefix": "is_brightness",
+		"description": "Tests the current brightness against a provided value in the range (0.0, 1.0).",
+		"body": [
+			"{ \"test\": \"is_brightness\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"is_climbing": {
+		"prefix": "is_climbing",
+		"description": "Returns true if the subject entity is climbing.",
+		"body": [
+			"{ \"test\": \"is_climbing\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_color": {
+		"prefix": "is_color",
+		"description": "Returns true if the subject entity is the named color.",
+		"body": [
+			"{ \"test\": \"is_color\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|black,blue,brown,cyan,gray,green,light_blue,light_green,magenta,orange,pink,purple,red,silver,white,yellow|}\" }"
+		]
+	},
+	"is_daytime": {
+		"prefix": "is_daytime",
+		"description": "Returns true during the daylight hours.",
+		"body": [
+			"{ \"test\": \"is_daytime\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_difficulty": {
+		"prefix": "is_difficulty",
+		"description": "Tests the current difficulty level of the game.",
+		"body": [
+			"{ \"test\": \"is_difficulty\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|peaceful,easy,normal,hard|}\" }"
+		]
+	},
+	"is_family": {
+		"prefix": "is_family",
+		"description": "Returns true when the subject entity is a member of the named family.",
+		"body": [
+			"{ \"test\": \"is_family\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"is_game_rule": {
+		"prefix": "is_game_rule",
+		"description": "Tests whether a named game rule is active.",
+		"body": [
+			"{ \"test\": \"is_game_rule\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"domain\": "${3|commandblockoutput,dodaylightcycle,doentitydrops,dofiretick,domobloot,domobspawning,dotiledrops,doweathercycle,drowningdamage,falldamage,firedamage,keepinventory,mobgriefing,naturalregeneration,pvp,sendcommandfeedback,showcoordinates,tntexplodes|}", \"value\": ${4|true, false|} }"
+		]
+	},
+	"is_humid": {
+		"prefix": "is_humid",
+		"description": "Tests whether the Subject is in an area with humidity",
+		"body": [
+			"{ \"test\": \"is_humid\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_immobile": {
+		"prefix": "is_immobile",
+		"description": "Returns true if the subject entity is immobile. An entity is immobile if it lacks AI goals, has just changed dimensions or if it is a mob and has no health.",
+		"body": [
+			"{ \"test\": \"is_immobile\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_moving": {
+		"prefix": "is_moving",
+		"description": "Returns true if the subject entity is moving.",
+		"body": [
+			"{ \"test\": \"is_moving\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_owner": {
+		"prefix": "is_owner",
+		"description": "Returns true if the subject entity is the owner of the calling entity.",
+		"body": [
+			"{ \"test\": \"is_owner\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_riding": {
+		"prefix": "is_riding",
+		"description": "Returns true if the subject entity is riding on another entity.",
+		"body": [
+			"{ \"test\": \"is_riding\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_sneaking": {
+		"prefix": "is_sneaking",
+		"description": "Returns true if the subject entity is sneaking.",
+		"body": [
+			"{ \"test\": \"is_sneaking\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_snow_covered": {
+		"prefix": "is_snow_covered",
+		"description": "Tests whether the Subject is in an area with snow cover.",
+		"body": [
+			"{ \"test\": \"is_snow_covered\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_target": {
+		"prefix": "is_target",
+		"description": "Returns true if the subject entity is the target of the calling entity.",
+		"body": [
+			"{ \"test\": \"is_target\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_temperature_type": {
+		"prefix": "is_temperature_type",
+		"description": "Tests whether the current temperature is a given type.",
+		"body": [
+			"{ \"test\": \"is_temperature_type\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|cold,mild,ocean,warm|}\" }"
+		]
+	},
+	"is_temperature_value": {
+		"prefix": "is_temperature_value",
+		"description": "Tests the current temperature against a provided value in the range (0.0, 1.0) where 0.0f is the coldest temp and 1.0f is the hottest.",
+		"body": [
+			"{ \"test\": \"is_temperature_value\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"is_underground": {
+		"prefix": "is_underground",
+		"description": "Returns true when the subject entity is underground. An entity is considered underground if there are non-solid blocks above it.",
+		"body": [
+			"{ \"test\": \"is_underground\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_underwater": {
+		"prefix": "is_underwater",
+		"description": "Returns true when the subject entity is under water. An entity is considered underwater if it is completely submerged in water blocks.",
+		"body": [
+			"{ \"test\": \"is_underwater\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"is_variant": {
+		"prefix": "is_variant",
+		"description": "Returns true if the subject entity is the variant number provided.",
+		"body": [
+			"{ \"test\": \"is_variant\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"moon_intensity": {
+		"prefix": "moon_intensity",
+		"description": "Compares the current moon intensity with a float value in the range (0.0, 1.0).",
+		"body": [
+			"{ \"test\": \"moon_intensity\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"$3\" }"
+		]
+	},
+	"moon_phase": {
+		"prefix": "moon_phase",
+		"description": "Compares the current moon phase with an integer value in the range (0, 7).",
+		"body": [
+			"{ \"test\": \"moon_phase\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": \"${3|0,1,2,3,4,5,6,7|}\" }"
+		]
+	},
+	"on_ground": {
+		"prefix": "on_ground",
+		"description": "Returns true when the subject entity is on ground.",
+		"body": [
+			"{ \"test\": \"on_ground\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
+		]
+	},
+	"on_ladder": {
+		"prefix": "on_ground",
+		"description": "Returns true when the subject entity is on a ladder.",
+		"body": [
+			"{ \"test\": \"on_ladder\", \"subject\": \"${1|self,other,parent,player,target|}\", \"operator\": \"${2|==,!=,<,<=,<>,=,>,>=,equals,not|}\", \"value\": ${3|true,false|} }"
 		]
 	}
 }
