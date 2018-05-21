@@ -30,7 +30,7 @@
 		"body": [
 			"do_not_upgrade: {},$0"
 		]
-	}
+	},
 	"components": {
 		"prefix": "components",
 		"body": [
@@ -93,7 +93,6 @@
 		]
 	},
 
-	//Filters
 	"clock_time": {
 		"prefix": "clock_time",
 		"description": "Compares the current time with a float value in the range (0.0, 1.0). 0.0= Noon 0.25= Sunset 0.5= Midnight 0.75= Sunrise",
