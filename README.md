@@ -1,3 +1,6 @@
+# Outdated
+This pack is outdated. If you're looking for up to date auto-completions for Minecraft add-ons, feel free to take a look at the dedicated add-on editor [bridge.](https://github.com/solveddev/bridge./)
+
 # VSCode-Minecraft-Suggestions
 Autocompletions for Minecraft's entity JSON. The descriptions and components were extracted from the official addon documentation. You shouldn't completely rely on the autocompletions but most are working quite well.
 
